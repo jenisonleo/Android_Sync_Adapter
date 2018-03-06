@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         startService(yIntent);
         Intent myIntent = new Intent(this, SyncService.class);
         startService(myIntent);
+        Account account=new Account("JENISON","zoho.com");
+        ContentResolver.setSyncAutomatically(account,"com.jenisontv.jenison_3631.test.provider",true);
     }
 
     public void read(View view) {
