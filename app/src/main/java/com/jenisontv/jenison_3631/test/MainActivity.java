@@ -20,11 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Intent yIntent = new Intent(this, AuthenticatorService.class);
-        startService(yIntent);
-        Intent myIntent = new Intent(this, SyncService.class);
-        startService(myIntent);
         Account account=new Account("JENISON","zoho.com");
         ContentResolver.setSyncAutomatically(account,"com.jenisontv.jenison_3631.test.provider",true);
     }
