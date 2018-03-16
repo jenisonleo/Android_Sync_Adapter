@@ -17,7 +17,6 @@ public class AuthenticatorService extends Service {
 
     @Override
     public void onCreate() {
-        Log.e("authenticator"," on create");
         mAuthenticator = new StubAutheticator(this);
 
     }
@@ -25,7 +24,6 @@ public class AuthenticatorService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        Log.e("authenticator", "on bind");
         return mAuthenticator.getIBinder();
     }
 }
